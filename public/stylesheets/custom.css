@@ -225,8 +225,22 @@ border-radius: 0px;
     transition: box-shadow 0.5s ease;
 }
 .panel.panel-primary.text-center.no-boder.bg-color-blue:hover {
-    box-shadow: 0 1.5px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0.5px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19);
     /*background-color: rgb(97, 103, 196);*/
+}
+
+.modal {
+    display: none; 
+    position: absolute; 
+    width: 300px; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    top: 300px; 
+    left: 650px;
+}
+.btn.btn-default.cancel{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 

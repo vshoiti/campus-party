@@ -13,14 +13,14 @@ function createActivity(req, res, next){
     req.body.cpf = parseInt(req.body.cpf);
     console.log('----------------------------------------------');    
     db.none('insert into ATIVIDADE(nome, ini, fim, cpf)' + 
-    'values(${nome}, ${ini}, ${fim}, ${cpf})',
-    req.body)
-    .then(function(){
-        console.log(req.body)
-        res.redirect('/');
-    })
-    .catch(function(err){
-        return next(err);
+            'values(${nome}, ${ini}, ${fim}, ${cpf})',
+            req.body)
+            .then(function(){
+                console.log(req.body)
+                res.redirect('/added');
+            })
+            .catch(function(err){
+                return next(err);
     });
 }
 
@@ -34,7 +34,26 @@ function getAllAtividades(req, res, next){
         })
 }
 
+function updateActivity(req, res, next){
+    db.none('update ATIVIDADE set nome=$1, ini=$2, fim=$3, cpf=$4 where nome=$5',
+    [req.body.nome, req.body.ini, req.body.fim, parseInt(req.body.cpf), req.params.nome])
+        .then(function(){
+            res.redirect('/atividades');
+        })
+}
+
+function removeActivity(req, res, next){
+    db.result('delete from ATIVIDADE where nome=$1', req.params.nome)
+    .then(function(result){
+        res.redirect('/atividades');
+    })
+}
+
+
+
 module.exports = {
     createActivity: createActivity,
-    getAllAtividades: getAllAtividades
+    getAllAtividades: getAllAtividades,
+    updateActivity: updateActivity,
+    removeActivity: removeActivity
 }

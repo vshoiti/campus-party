@@ -26,6 +26,14 @@ block content
                                 td #{val.fim}
                                 td #{val.cpf}
                                 td 
-                                    a(href="/sdg" class="btn btn-default") Editar
+                                    a(href="/edit/act/#{val.nome}" class="btn btn-default") Editar
                                 td
-                                    a(href="/sdg" class="btn btn-danger") Excluir
+                                    button(class="btn btn-danger btn-span" id="#{val.nome}" onClick="deletar(this.id)") Excluir
+        
+            #myModal.modal
+                // Modal content
+                .modal-content
+                    span.close ×
+                    p Tem certeza que deseja excluir? 
+                    button(id="modalCancel", class="btn btn-default cancel") Cancelar
+                    a(id="modalExclui", class="btn btn-danger delete") Excluir
