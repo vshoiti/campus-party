@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    #page-wrapper
+        #page-inner
+            .row
+                .col-md-12
+                    h1 Adicionar suprimento
+                    p Preencha o formulário para criar um novo suprimento.             
+                
+            // /. ROW
+            hr
+
+            form(action="", class="col-md-4", method="post")
+                .form-group
+                    label ID
+                    input(class="form-control", name="id")
+                .form-group
+                    label Descrição
+                    input(class="form-control", name="descricao")
+                .form-group
+                    label Quantidade
+                    input(class="form-control", name="quantidade")
+                .actions
+                    input(type="submit", value="Adicionar", class="btn btn-primary")

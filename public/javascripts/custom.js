@@ -72,6 +72,18 @@ function deletar(clickned_id){
     const id = "/delete/act/" + clickned_id;
     $("#modalExclui").attr('href', id);
 }
+
+function deletarSup(clickned_id){
+    modal.style.display='block';
+    const id = "/delete/sup/" + clickned_id;
+    $("#modalExclui").attr('href', id);
+}
+
+function deletarRel(clickned_id){
+    modal.style.display='block';
+    const id = "/delete/rel/" + clickned_id;
+    $("#modalExclui").attr('href', id);
+}
 // When the user clicks the button, open the modal 
 
 // When the user clicks on <span> (x), close the modal

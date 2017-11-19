@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    #page-wrapper
+        #page-inner
+            .row
+                .col-md-12
+                    h1 Lista de atividades
+                
+            // /. ROW
+            hr
+
+            .col-md-6
+                table.table.table-striped.table-bordered.table-hover
+                    thead
+                        tr
+                            th ID
+                            th Descrição
+                            th Quantidade
+                    tbody
+                        each val in SUPRIMENTO
+                            tr
+                                td #{val.id}
+                                td #{val.quantidade}
+                                td #{val.descricao}
+                                td 
+                                    a(href="/edit/sup/#{val.id}" class="btn btn-default") Editar
+                                td
+                                    button(class="btn btn-danger btn-span" id="#{val.id}" onClick="deletarSup(this.id)") Excluir
+        
+            #myModal.modal
+                // Modal content
+                .modal-content
+                    span.close ×
+                    p Tem certeza que deseja excluir? 
+                    button(id="modalCancel", class="btn btn-default cancel") Cancelar
+                    a(id="modalExclui", class="btn btn-danger delete") Excluir

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    #page-wrapper
+        #page-inner
+            .row
+                .col-md-12
+                    h1 Adicionar relação.
+                    p Preencha o formulário para criar uma nova relação entre uma atividade e seus suprimentos.             
+                
+            // /. ROW
+            hr
+
+            form(action="", class="col-md-4", method="post")
+                .form-group
+                    label ID
+                    input(class="form-control", name="id")
+                    p.help-block ID do suprimento.
+                .form-group
+                    label Nome
+                    input(class="form-control", name="nome")
+                    p.help-block Nome da atividade.
+                .form-group
+                    label Quantidade
+                    input(class="form-control", name="quantidade")
+                    p.help-block Quantidade que será utilizada.
+                .actions
+                    input(type="submit", value="Adicionar", class="btn btn-primary")
