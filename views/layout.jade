@@ -1,0 +1,117 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Festa no Campus
+    // BOOTSTRAP STYLES
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    // FONTAWESOME STYLES
+    link(href='/stylesheets/font-awesome.css', rel='stylesheet')
+    // CUSTOM STYLES
+    link(href='/stylesheets/custom.css', rel='stylesheet')
+    // GOOGLE FONTS
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+  body
+    #wrapper
+      .navbar.navbar-inverse.navbar-fixed-top
+        .adjust-nav
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.sidebar-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#')
+              i.fa.fa-square-o
+              | Festa no Campus
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='#') See Website
+              li
+                a(href='#') Open Ticket
+              li
+                a(href='#') Report Bug
+      // /. NAV TOP
+      nav.navbar-default.navbar-side(role='navigation')
+        .sidebar-collapse
+          ul#main-menu.nav
+            li.text-center.user-image-back
+              img.img-responsive(src='/images/campus-logo.png')
+            li
+              a(href='/')
+                i.fa.fa-desktop
+                | Início
+            li
+              a(href='#')
+                i.fa.fa-edit
+                | Entidades
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a(href='/atividades') Atividades
+                li
+                  a(href='/suprimentos') Suprimentos
+                li
+                  a(href='/utiliza') Utiliza
+            li
+              a(href='#')
+                i.fa.fa-table
+                | Table Examples
+            li
+              a(href='#')
+                i.fa.fa-edit
+                | Forms
+            li
+              a(href='#')
+                i.fa.fa-sitemap
+                | Multi-Level Dropdown
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a(href='#') Second Level Link
+                li
+                  a(href='#') Second Level Link
+                li
+                  a(href='#')
+                    | Second Level Link
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a(href='#') Third Level Link
+                    li
+                      a(href='#') Third Level Link
+                    li
+                      a(href='#') Third Level Link
+            li
+              a(href='#')
+                i.fa.fa-qrcode
+                | Tabs & Panels
+            li
+              a(href='#')
+                i.fa.fa-bar-chart-o
+                | Mettis Charts
+            li
+              a(href='#')
+                i.fa.fa-edit
+                | Last Link
+            li
+              a(href='blank.html')
+                i.fa.fa-table
+                | Blank Page
+      // /. NAV SIDE
+      block content
+          // /. ROW
+        // /. PAGE INNER
+      // /. PAGE WRAPPER
+    // /. WRAPPER
+    // SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME
+    // JQUERY SCRIPTS
+    script(src='/javascripts/jquery-1.10.2.js')
+    // BOOTSTRAP SCRIPTS
+    script(src='/javascripts/bootstrap.min.js')
+    // METISMENU SCRIPTS
+    script(src='/javascripts/jquery.metisMenu.js')
+    // CUSTOM SCRIPTS
+    script(src='/javascripts/custom.js')
+

@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  #page-wrapper
+          #page-inner
+            .row
+              .col-md-12
+                h1= Index
+                h2 Seja bem-vindo ao gerenciamento de atividades da festa!
+                p Utilize os botões para criar novas atividades, suprimentos, ou uma relação entre os dois.             
+                
+            // /. ROW
+            hr
+
+            .col-md-3.col-sm-3.col-xs-6
+              a(href="/add/act")
+                .panel.panel-primary.text-center.no-boder.bg-color-blue
+                  .panel-body
+                    i.fa.fa-bar-chart-o.fa-5x
+                    h3 Atividade
+                  .panel-footer.back-footer-blue
+                    | Adicionar
+            .col-md-3.col-sm-3.col-xs-6
+              a(href="/add")
+                .panel.panel-primary.text-center.no-boder.bg-color-blue
+                  .panel-body
+                    i.fa.fa-bar-chart-o.fa-5x
+                    h3 Suprimento
+                  .panel-footer.back-footer-blue
+                    | Adicionar
+            .col-md-3.col-sm-3.col-xs-6
+              a(href="/add")
+                .panel.panel-primary.text-center.no-boder.bg-color-blue
+                  .panel-body
+                    i.fa.fa-bar-chart-o.fa-5x
+                    h3 Utiliza
+                  .panel-footer.back-footer-blue
+                    | Adicionar
+            
+          
+  

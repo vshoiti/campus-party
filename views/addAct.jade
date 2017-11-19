@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    #page-wrapper
+        #page-inner
+            .row
+                .col-md-12
+                    h1 Adicionar atividade
+                    p Preencha o formulário para criar uma nova atividade.             
+                
+            // /. ROW
+            hr
+
+            form(action="", class="col-md-4", method="post")
+                .form-group
+                    label Nome
+                    input(class="form-control", name="nome")
+                .form-group
+                    label Início
+                    input(class="form-control", name="ini")
+                    p.help-block Formato: AAAA-MM-DD
+                .form-group
+                    label Fim
+                    input(class="form-control", name="fim")
+                    p.help-block Formato: AAAA-MM-DD
+                .form-group
+                    label CPF
+                    input(class="form-control", name="cpf")
+                    p.help-block 11 caracteres
+                .actions
+                    input(type="submit", value="Adicionar", class="btn btn-primary")

@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    #page-wrapper
+        #page-inner
+            .row
+                .col-md-12
+                    h1 Lista de atividades
+                
+            // /. ROW
+            hr
+
+            .col-md-6
+                table.table.table-striped.table-bordered.table-hover
+                    thead
+                        tr
+                            th Nome
+                            th Início
+                            th Fim
+                            th CPF do gerente
+                    tbody
+                        each val in ATIVIDADE
+                            tr
+                                td #{val.nome}
+                                td #{val.ini}
+                                td #{val.fim}
+                                td #{val.cpf}
+                                td 
+                                    a(href="/sdg" class="btn btn-default") Editar
+                                td
+                                    a(href="/sdg" class="btn btn-danger") Excluir
