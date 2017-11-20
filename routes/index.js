@@ -38,7 +38,7 @@ router.get('/delete/sup/:id', db.removeSup);
 
 
 
-router.get('/relacoes', db.getAllSuprimentos);
+router.get('/utiliza', db.getAllRel);
 router.get('/add/rel', function(req, res){
   res.render('addRel');
 });

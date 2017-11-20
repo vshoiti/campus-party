@@ -43,7 +43,7 @@ function updateActivity(req, res, next){
 }
 
 function removeActivity(req, res, next){
-    db.result('delete from ATIVIDADE where nome=$1', req.params.nome)
+    db.result('delete from UTILIZA where nome=$1; delete from ATIVIDADE where nome=$1', req.params.nome)
     .then(function(result){
         res.redirect('/atividades');
     })
@@ -84,7 +84,7 @@ function updateSup(req, res, next){
         })
 }
 function removeSup(req, res, next){
-    db.result('delete from SUPRIMENTO where id=$1', req.params.id)
+    db.result('delete from UTILIZA where id=$1; delete from SUPRIMENTO where id=$1', req.params.id)
     .then(function(result){
         res.redirect('/suprimentos');
     })
@@ -93,9 +93,9 @@ function removeSup(req, res, next){
 
 
 function getAllRel(req, res, next){
-    db.any('select * from SUPRIMENTO')
+    db.any('select * from UTILIZA')
     .then(function(data){
-        res.render('relacoes', {SUPRIMENTO: data});
+        res.render('relacoes', {UTILIZA: data});
     })
     .catch(function(err){
         return next(err);
