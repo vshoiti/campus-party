@@ -5,8 +5,14 @@ var options = {
     promiseLib: promise
 };
 
+
 var pgp = require('pg-promise')(options);
-var connectionsString = 'postgres://postgres:postgres@localhost:5432/party';
+
+var connectionsString = 'postgres://postgres@localhost:5432/party';
+var pw = process.argv[2];
+if (pw != undefined)
+    connectionsString = 'postgres://postgres:' + pw + '@localhost:5432/party';
+
 var db = pgp(connectionsString);
 
 function createActivity(req, res, next){
