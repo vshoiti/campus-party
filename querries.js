@@ -12,8 +12,8 @@ var db = pgp(connectionsString);
 function createActivity(req, res, next){
     req.body.cpf = parseInt(req.body.cpf);
     console.log('----------------------------------------------');    
-    db.none('insert into ATIVIDADE(nome, ini, fim, cpf)' + 
-            'values(${nome}, ${ini}, ${fim}, ${cpf})',
+    db.none('insert into ATIVIDADE(nome, cpf)' + 
+            'values(${nome}, ${cpf})',
             req.body)
             .then(function(){
                 console.log(req.body)

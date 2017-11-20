@@ -25,8 +25,6 @@ create database party;
 
 create table ATIVIDADE (
      nome varchar(128) not null,
-     ini date,
-     fim date,
      cpf numeric(11) not null,
      constraint ID_ATIVIDADE_ID primary key (nome));
 

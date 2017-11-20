@@ -15,15 +15,11 @@ block content
                     thead
                         tr
                             th Nome
-                            th Início
-                            th Fim
                             th CPF do gerente
                     tbody
                         each val in ATIVIDADE
                             tr
                                 td #{val.nome}
-                                td #{val.ini}
-                                td #{val.fim}
                                 td #{val.cpf}
                                 td 
                                     a(href="/edit/act/#{val.nome}" class="btn btn-default") Editar
