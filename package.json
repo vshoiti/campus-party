@@ -2,6 +2,13 @@
   "name": "campus-party",
   "version": "0.0.0",
   "private": true,
+  "bin": "bin/www",  
+  "pkg": {
+    "scripts": "build/**/*.js",
+    "assets": [
+      "views/**/*", "routes/**/*", "public/**/*"
+    ]
+  },  
   "scripts": {
     "start": "node ./bin/www"
   },
