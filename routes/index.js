@@ -49,4 +49,8 @@ router.get('/edit/rel/:id', function(req, res, next){
 router.post('/edit/rel/:id', db.updateRel);
 router.get('/delete/rel/:id', db.removeRel);
 
+router.get('/info', function(req, res){
+  res.render('info');
+})
+
 module.exports = router;
