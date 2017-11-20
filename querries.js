@@ -8,10 +8,14 @@ var options = {
 
 var pgp = require('pg-promise')(options);
 
-var connectionsString = 'postgres://postgres@localhost:5432/party';
 var pw = process.argv[2];
-if (pw != undefined)
-    connectionsString = 'postgres://postgres:' + pw + '@localhost:5432/party';
+if (pw == undefined) {
+    console.log('por favor informe a senha do usuário postgres');
+    console.log('executando ./app-[versão] senha');
+    process.exit(-1);
+}
+
+var connectionsString = 'postgres://postgres:' + pw + '@localhost:5432/party';
 
 var db = pgp(connectionsString);
 
